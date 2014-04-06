@@ -1,0 +1,36 @@
+package Checkers;
+
+//change all the methods
+//and the return statements
+
+public class CheckersGame {
+     int [][] board;
+     int activeX, activeY;
+     
+     public void clicked(int x, int y){
+    	 
+     }
+     public void move(int x1, int y1, int x2, int y2){
+    	 
+     }
+     public int redScore(){
+    	 return 0;
+     }
+     public int blackScore(){
+    	 return 0;
+     }
+     
+     // is the square red at that position
+     public boolean redSquare(int x, int y){
+    	 return false;
+     }
+     public boolean blackSquare(int x, int y){
+    	 return false;
+     }
+     public boolean isEmpty(int x, int y){
+    	 return false;
+     }
+     public boolean active(int x, int y){
+    	 return false;
+     }
+}
