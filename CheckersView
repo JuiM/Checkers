@@ -1,0 +1,71 @@
+package Checkers;
+
+import java.awt.Color;
+import java.awt.Graphics;
+import java.awt.event.MouseEvent;
+import java.awt.event.MouseListener;
+
+import javax.swing.JFrame;
+
+public class CheckersView extends JFrame implements MouseListener{
+CheckersGame game;
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		new CheckersView();
+
+	}
+	public CheckersView(){
+		super("Checkers");
+		setSize(500,530);
+		setVisible(true);
+	}
+	public void paint(Graphics g){
+		paintBoard(g);
+		paintActive(g);
+		paintPieces(g);
+	}
+	private void paintActive(Graphics g) {
+		// TODO Auto-generated method stub
+		
+	}
+	private void paintPieces(Graphics g) {
+		
+
+	}
+	
+	private void paintBoard(Graphics g) {
+		for(int x =0; x<10; x++){
+			for(int y=0;y<10;y++){
+				if( x%2 == y%2)
+					g.setColor(Color.WHITE);
+				else
+					g.setColor(Color.BLACK);
+				g.fillRect(x*50, 30 + y*50,  50, 50);
+			}
+		}
+	}
+	@Override
+	public void mouseClicked(MouseEvent e) {
+		game.clicked(x, y);
+	}
+	@Override
+	public void mouseEntered(MouseEvent e) {
+		// TODO Auto-generated method stub
+		
+	}
+	@Override
+	public void mouseExited(MouseEvent e) {
+		// TODO Auto-generated method stub
+		
+	}
+	@Override
+	public void mousePressed(MouseEvent e) {
+		// TODO Auto-generated method stub
+		
+	}
+	@Override
+	public void mouseReleased(MouseEvent arg0) {
+		// TODO Auto-generated method stub
+		
+	}
+}
